@@ -4,12 +4,14 @@ import csv
 
 f=open('database.csv','w')
 main_list = [ ]
-# setting variables access related keys and secrets
-consumer_key = 'NIX4Duq1L3dtpGsl7FmnJFqCj'
-consumer_secret = '5juAzuNYYG7KBSAII8U7GcyjjyhbOfnkKjanAmfmCodrR0mljk'
 
-access_token = '2835145946-EdIEwIAbnUgMA7mOUXiGl3atCOBCQBDKYf57pKG'
-access_token_secret = 'LjQXC0w6x6qky6ZIuSIIkKQ30Fj3M5eDy1jAhSrSQER0m'
+# setting variables access related keys and secrets
+# enter the key and secret token below
+consumer_key= 'CONSUMER_KEY_HERE'
+consumer_secret= 'CONSUMER_SECRET_HERE'
+
+access_token='ACCESS_TOKEN_HERE'
+access_token_secret='ACCESS_TOKEN_SECRET_HERE'
 
 auth=tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
