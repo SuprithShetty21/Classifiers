@@ -57,9 +57,9 @@ acc_dict = { 'DecisionTreeClassifier' : acc_dectree, 'KNeighborClassifier' : acc
 pred_dict = { 0 : 'DecisionTreeClassifier', 1 : 'KNeighborClassifier', \
             2 : 'GaussianNaiveBayesClassifier', 3 : 'SupportVectorMachineClassifier'}
 
-print('The accuracies of the 4 models are : ')
+print('\nThe accuracies of the 4 models are : \n')
 for key in acc_dict:
     print(key+" ==> "+str(acc_dict[key]))
 
-print('The best classifier is : {}'.format(pred_dict[index]))
+print('\n\nThe best classifier is : {}'.format(pred_dict[index]))
 
