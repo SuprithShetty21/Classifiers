@@ -11,7 +11,7 @@ dectree = tree.DecisionTreeClassifier()
 
 # 2 KNeighbors classifier
 
-kneigh = KNeighborsClassifier(n_neighbors=3)
+kneigh = KNeighborsClassifier()
 
 # 3 Gaussian Naive Bayes classifier
 GaussNB = GaussianNB()
