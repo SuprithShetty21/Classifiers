@@ -4,6 +4,7 @@ import csv
 
 f=open('database.csv','w')
 main_list = [ ]
+row0 = ['Tweet','polarity','subjectivity']
 
 # setting variables access related keys and secrets
 # enter the key and secret token below
@@ -19,7 +20,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # makes a list of tweets
-public_tweets = api.search('Narendra Modi')
+public_tweets = api.search('Trump')
 
 
 # function to return whether sentiments are positive or negative
@@ -49,9 +50,9 @@ for tweet in public_tweets :
 
 print(main_list)
 
-#with f:
-   # writer = csv.writer(f)
-    #writer.writerows(main_list)
-
+write_ = csv.writer(f)
+write_.writerow(row0)
+write_.writerows(main_list)
+f.close()
 
 
