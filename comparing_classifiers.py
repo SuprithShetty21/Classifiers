@@ -51,12 +51,15 @@ acc_svc = acc_(Y,prediction4)*100
 #find the best performing model
 index = np.argmax([acc_dectree,acc_kneigh,acc_gauss,acc_svc])
 
-acc_dict = { 0 : acc_dectree, 1 : acc_kneigh, 2 : acc_gauss, 3 : acc_svc }
+acc_dict = { 'DecisionTreeClassifier' : acc_dectree, 'KNeighborClassifier' : acc_kneigh, \
+            'GaussianNaiveBayesClassifier' : acc_gauss, 'SupportVectorMachineClassifier' : acc_svc }
 
 pred_dict = { 0 : 'DecisionTreeClassifier', 1 : 'KNeighborClassifier', \
-    2 : 'GaussianNaiveBayesClassifier', 3 : 'SupportVectorMachineClassifier'}
+            2 : 'GaussianNaiveBayesClassifier', 3 : 'SupportVectorMachineClassifier'}
 
-#print('The accuracies of the 4 models are {0:>.6d} {1:>.6d} {2:>.6d} {3:>.6d}'\
-    #.format(val) for val in acc_dict.values())
+print('The accuracies of the 4 models are : ')
+for key in acc_dict:
+    print(key+" ==> "+str(acc_dict[key]))
+
 print('The best classifier is : {}'.format(pred_dict[index]))
 
